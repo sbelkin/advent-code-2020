@@ -1,5 +1,6 @@
 package io.sbelkin.adventcode;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,8 +51,15 @@ public class Day1 {
     return -1;
   }
 
-  // Hmmm with 3 numbers this become a bit more complicate it can be brute forced by creating a map based on the set values with those size would be N*N-1 of input
-  // runtime N^2+2N and space N^2+N - where N is size of input so should look to see if we can do this better.
+  // Attempt to write a better algorithm for solving part 2
+  public Integer expenseReportValidationPart2Attempt2(List<Integer> input) {
+    // Will need to think more.
+    return -1;
+  }
+
+  // Hmmm with 3 numbers this become a bit more complicate it can be brute forced by creating a map
+  // based on the set values with those size would be N*N-1 of input.
+  // runtime N^2+2N -> N^2 and space N^2+N -> N^2 - where N is size of input so should look to see if we can do this better.
   public Integer expenseReportValidationPart2(List<Integer> input) {
     Set<Integer> integersDifferencesFromValue = new HashSet<>();
     Map<Integer, Integer> integersDifferencesFromValuePart2 = new HashMap<>();
@@ -80,5 +88,7 @@ public class Day1 {
     // not sure what to do if not found.
     return -1;
   }
+
+
 
 }
