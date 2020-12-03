@@ -52,7 +52,25 @@ public class Day1 {
   }
 
   // Attempt to write a better algorithm for solving part 2
+  // Can reduce Space usage
+  // Space: N
+  // Runtime: N^2+N-> N^2
   public Integer expenseReportValidationPart2Attempt2(List<Integer> input) {
+    Set<Integer> integersDifferencesFromValue = new HashSet<>();
+    // Fill set with values that are differences of 2020;
+    for (Integer integer : input) {
+      Integer value = 2020 - integer;
+      integersDifferencesFromValue.add(value);
+    }
+    for (Integer integer : input) {
+      for (Integer integer2 : input) {
+        if (integersDifferencesFromValue.contains(integer+integer2) && !integer.equals(integer2)) {
+          Integer integer3 = 2020-integer-integer2;
+          return integer*integer2*integer3;
+        }
+      }
+    }
+
     // Will need to think more.
     return -1;
   }
