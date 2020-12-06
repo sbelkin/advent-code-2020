@@ -7,7 +7,17 @@ public class Executor {
   private static final Shared shared = new Shared();
 
   public static void main(String[] args) {
-    day5();
+    day6();
+  }
+
+  public static void day6() {
+    Day6 day6 = new Day6();
+    List<String> listDefault = shared.readFileInputString("src/main/resources/day6_input_default.txt");
+    List<String> listInput = shared.readFileInputString("src/main/resources/day6_input.txt");
+    System.out.println(day6.countAllAnswers(listDefault)); // expected: 11
+    System.out.println(day6.countAllAnswers(listInput));
+    System.out.println(day6.countAllAnswersPart2(listDefault)); // expected: 6
+    System.out.println(day6.countAllAnswersPart2(listInput));
   }
 
   public static void day5() {
