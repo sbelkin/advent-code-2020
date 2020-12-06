@@ -1,6 +1,5 @@
 package io.sbelkin.adventcode;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Executor {
@@ -8,10 +7,18 @@ public class Executor {
   private static final Shared shared = new Shared();
 
   public static void main(String[] args) {
-    day3();
+    day4();
   }
 
   public static void day4() {
+    Day4 day4 = new Day4();
+    List<String> listOfStrings = shared.readFileInputString("src/main/resources/day4_input_default.txt");
+    List<String> listOfStrings2= shared.readFileInputString("src/main/resources/day4_input_default_valid.txt");
+    List<String> listInput = shared.readFileInputString("src/main/resources/day4_input.txt");
+//    System.out.println(day4.countValidPassports(listOfStrings)); // expected 2
+//    System.out.println(day4.countValidPassports(listInput));
+    System.out.println(day4.countValidPassportsPart2(listOfStrings2)); // expected 4
+    System.out.println(day4.countValidPassportsPart2(listInput));
 
   }
 
