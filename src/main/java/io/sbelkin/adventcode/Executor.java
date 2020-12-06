@@ -7,7 +7,20 @@ public class Executor {
   private static final Shared shared = new Shared();
 
   public static void main(String[] args) {
-    day4();
+    day5();
+  }
+
+  public static void day5() {
+    Day5 day5 = new Day5();
+    List<String> listOfStrings = List.of("BFFFBBFRRR", "FFFBBBFRRR", "BBFFBBFRLL");
+    List<String> listOfFBFBBFFRLR = List.of("FBFBBFFRLR");
+    List<String> listOfFFFBFFFRLL = List.of("FFFBFFFRLL");
+    List<String> listInput = shared.readFileInputString("src/main/resources/day5_input.txt");
+    System.out.println(day5.findHighestSeatId(listOfFBFBBFFRLR)); // highest id: 357
+    System.out.println(day5.findHighestSeatId(listOfFFFBFFFRLL)); // highest id: 357
+    System.out.println(day5.findHighestSeatId(listOfStrings)); // highest id: 820
+    System.out.println(day5.findHighestSeatId(listInput));
+    System.out.println(day5.findYourSeatId(listInput));
   }
 
   public static void day4() {
