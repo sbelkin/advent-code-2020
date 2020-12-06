@@ -1,4 +1,4 @@
-package io.sbelkin.adventcode;
+package io.sbelkin.adventcode.day01to07;
 
 
 import java.util.HashMap;
